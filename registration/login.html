@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-1.0">
+        <title>Document</title>
+        <style>
+            /* Style the submit button */
+            input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+    <h3>Login</h3>        
+    
+    <div>
+        <form action="/registerion.html" method="get" name="customer" >
+            <label for="email">Username (email) :</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="psw">Password :</label><br>
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="Must contain at least one number and one uppercase and lowercase letter, 
+            and at least 8 or more characters" required><br><br>
+
+
+            <input type="submit"><br>
+
+           <a href="/registration.html">registration</a>
+        </form>
+
+        
+
+    </body>
+</html>
