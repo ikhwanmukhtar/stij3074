@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Food Menu</title> 
+<style>
+    /* Style the submit button */
+    input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    }
+    </style>
+</head>
+<h3>Food Menu</h3> 
+
+<body>
+<form action="menu.php">
+    <label for="foodID">Enter Food ID:</label><br>
+    <input type="foodID" id="foodID" name="foodID" required><br>
+
+    <label for="foodname">Enter Food Name:</label><br>
+    <input type="text" name="foodname" id="foodname" required><br>
+
+    <label for="price">Enter Price:</label><br>
+    <input type="text" id="price" name="price" required><br>
+
+    <label for="quantity">Enter quantity:</label><br>
+    <input type="text" id="quantity" name="quantity" required><br>
+
+    <label for="calorie">Enter calorie:</label><br>
+    <input type="text" id="calorie" name="calorie" required><br>
+
+    <br><input type="submit">
+</form>
+</body>
+</html>
