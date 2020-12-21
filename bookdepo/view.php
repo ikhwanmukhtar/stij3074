@@ -50,7 +50,7 @@ try {
          echo "<td>".$book['publisher']."</td>";
          echo "<td>".$book['isbn']."</td>";
          echo "<td><a href='view.php?id=".$id."&operation=del'>Delete</a><br>
-         <a href='update.php?id=".$id."&title=".$book['title']."&author=".$book['author']."&price=".$book['price']."&discription=".$book['discription']."&publisher=".$book['publisher']."&isbn=".$book['isbn']."&operation=upd'>Update</a>
+         <a href='update.php?id=".$id."&title=".$book['title']."&author=".$book['author']."&price=".$book['price']."&discription=".$book['discription']."&publisher=".$book['publisher']."&isbn=".$book['isbn']."'>Update</a>
          </td>";
          echo "</tr>";
      }

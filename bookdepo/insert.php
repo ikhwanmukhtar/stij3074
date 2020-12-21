@@ -10,10 +10,10 @@ $publisher = $_GET['publisher'];
 $isbn = $_GET['isbn'];
 
 //connect to database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bookdepo";
+$servername = "sql303.epizy.com";
+$username = "epiz_27068173";
+$password = "jTVoHai91f";
+$dbname = "epiz_27068173_ikhwanbookdepo";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
