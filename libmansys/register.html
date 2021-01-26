@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+     <!-- BOOTSTRAP CORE STYLE  -->
+     <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONT AWESOME STYLE  -->
+     <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- CUSTOM STYLE  -->
+     <link href="assets/css/style.css" rel="stylesheet" />
+     <!-- GOOGLE FONT -->
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+ 
+    <title>Online Library Management System</title>
+
+
+</head>
+<body>
+<div>
+
+  <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+
+<div class="content-wrapper">
+<div class="container">
+<div class="row pad-botm">
+<div class="col-md-12">
+<h4 class="header-line">Sign Up</h4>
+</div>
+</div>
+           
+<!--LOGIN PANEL START-->           
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
+<div class="panel panel-info">
+<div class="panel-heading">
+SIGN UP FORM
+</div>
+<div class="panel-body">
+          
+  <form action="register.php" method="post" align="center"
+  onsubmit="return confirm('Are you sure you want to register?');">
+  
+  <label for="staffname">Enter your name:</label><br>
+  <input type="text" id="staffname" name="staffname" value="" required><br>
+
+  <label for="staffemail">Enter your email:</label><br>
+  <input type="text" id="staffemail" name="staffemail" value="" required><br>
+
+  <label for="staffID">Enter your ID:</label><br>
+  <input type="text" id="staffID" name="staffID" value="" required><br>
+
+  <label for="password">Enter password:</label><br>
+  <input type="password" id="password" name="password" value="" required><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+<p align="center"><a href="index.html">Already register? Login</a></p>
+            
+                     
+                  </div>
+            
+              </div>
+            </div>
+<!---LOGIN PANEL END-->            
+
+          
+            
+          
+          </body>
+</html>
