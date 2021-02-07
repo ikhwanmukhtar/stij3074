@@ -3,63 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
     <title>Online Library Management System</title>
-    <!-- BOOTSTRAP CORE STYLE  -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME STYLE  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- CUSTOM STYLE  -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-</head>
 <body>
+<h1 style='color: white' align="center">LIBRARY MANAGEMENT SYSTEM</h1>
 
-  <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+<div class="login-box">
+  <h1>Login</h1>
+<form action="login.php" method="post" align="center" onsubmit="return confirm('Login?');">
+   
+  <div class="textbox">
+    <input type="text" placeholder="Email" id="staffemail" name="staffemail" value="" required>
+  </div>
 
-<div class="content-wrapper">
-<div class="container">
-<div class="row pad-botm">
-<div class="col-md-12">
-<h4 class="header-line">LOG IN</h4>
-</div>
-</div>
-           
-<!--LOGIN PANEL START-->           
-<div class="row">
-<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
-<div class="panel panel-info">
-<div class="panel-heading">
-LOGIN FORM
-</div>
-<div class="panel-body">
-          
-            <form action="managerecord.php" method="post" align="center"
-              onsubmit="return confirm('Login?');">
-              
-              <label for="staffemail">Enter your email:</label><br>
-              <input type="text" id="staffemail" name="staffemail" value="" required><br>
-          
-             <label for="password">Enter password:</label><br>
-              <input type="password" id="password" name="password" value="" required><br><br>
-          
-              <input type="submit" name="login" value="Submit">
-            </form>
-            <p align="center"><a href="register.html">Don't have an account? Register</a></p>
-            <br>
-            <br>
-            <br>
-            <p align="center"><a>2020 Library Management System | Designed by: IKHWAN MUKHTAR</a></p>
+  <div class="textbox">
+    <input type="password" placeholder="Password" id="password" name="password" value="" required>
+  </div>
 
-            
-                     
-                  </div>
-            
-              </div>
-            </div>
-<!---LOGIN PANEL END-->            
+          
+  <input class="btn" type="submit" name="login" value="Submit">
+</form>
+<p align="center"><a href="register.html">Don't have an account? Register</a></p>
+</div>
+
+
+  
 </body>
 </html>

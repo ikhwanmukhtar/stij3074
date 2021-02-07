@@ -1,14 +1,14 @@
 <?php
 
+//connect to db
+include_once("dbconnect.php");
+
+
 //get data
 $staffname = $_POST['staffname'];
 $staffemail = $_POST['staffemail']; 
 $staffID = $_POST['staffID'];
 $password = sha1($_POST['password']);
-
-//connect to db
-include_once("dbconnect.php");
-
 
 try{
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
