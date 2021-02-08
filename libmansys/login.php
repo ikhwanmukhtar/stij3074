@@ -28,7 +28,7 @@ try {
 
         
         echo "<script> alert('Login Success')</script>";
-        echo "<script> window.location.replace('managerecord.php?') </script>;";
+        echo "<script> window.location.replace('mainpage.php?') </script>;";
     }else{
         echo "<script> alert('Login Failed')</script>";
         echo "<script> window.location.replace('index.html') </script>;";

@@ -12,135 +12,67 @@ include("dbconn.php");
   <title>Library Management System</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
-
-    
+  <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
 
+<body>
                 
-<div class="container">
-    <div class="col-lg-4">
-  <h2 style='font-size:30px; color: black;'>Insert New Record</h2>
+  <h2 style='font-size:30px; color: white;'>Insert New Record</h2>
+  <div class="login-box">
   <form action="" method="post" enctype="multipart/form-data">
 
-      <div class="form-group">
-        <label for="id" style='font-size:16px; color: black;'>ID:</label>
-        <input type="text" class="form-control" id="id" placeholder="Enter ID" name="id">
-      </div>
-
-      <div class="form-group">
-        <label for="name" style='font-size:16px; color: black;'>Name:</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-      </div>
-
-      <div class="form-group">
-        <label for="title" style='font-size:16px; color: black;'>Title:</label>
-        <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
-      </div>
-
-      <div class="form-group">
-        <label for="author" style='font-size:16px; color: black;'>Author:</label>
-        <input type="text" class="form-control" id="author" placeholder="Enter author" name="author">
-      </div>
-
-      <div class="form-group">
-        <label for="price" style='font-size:16px; color: black;'>Price:</label>
-        <input type="text" class="form-control" id="price" placeholder="Enter price" name="price">
-      </div>
-
-      <div class="form-group">
-        <label for="isbn" style='font-size:16px; color: black;'>ISBN:</label>
-        <input type="text" class="form-control" id="isbn" placeholder="Enter isbn" name="isbn">
-      </div>
-
-    
-
-      <div class="form-group">
-        <label for="type" style='font-size:16px; color: black;'>Status:</label>
-        <select style='font-size:16px; color: black;' name="type">
-          <option style='font-size:16px; color: black;' for="type" value="-1" >Select status</option>
-          <option style='font-size:16px; color: black;' value="Returned">Returned</option>
-          <option style='font-size:16px; color: black;' value="Pending">Pending</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="pwd" style='font-size:16px; color: black;'>Image:</label>
-        <input type="file" class="form-control" name="f1">
-      </div>
-
-    <button type="submit" name="insert" class="btn btn-default">Insert</button>
-    <p><br><a href="index.html">Logout</a><br></p>
-  </form>
-</div>
+<div class="textbox">
+  <input type="text" placeholder="ID" id="id" name="id" value="" required>
 </div>
 
-
-<div class="col-lg-12">
-
-<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th style='font-size:16px; color: black;'>ID</th>
-        <th style='font-size:16px; color: black;'>Book Picture</th>
-        <th style='font-size:16px; color: black;'>Name</th>
-        <th style='font-size:16px; color: black;'>Title</th>
-        <th style='font-size:16px; color: black;'>Author</th>
-        <th style='font-size:16px; color: black;'>Price</th>
-        <th style='font-size:16px; color: black;'>ISBN</th>
-        <th style='font-size:16px; color: black;'>Status</th>
-        <th style='font-size:16px; color: black;'>Edit</th>
-        <th style='font-size:16px; color: black;'>Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-
-    <?php
-      $res=mysqli_query($link, "SELECT * FROM record");
-      while ($row=mysqli_fetch_array($res)){
-
-          echo "<tr>";
-          echo "<td style='font-size:16px; color: black;'>"; echo $row["id"]; echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; ?> <img src="<?php echo $row["image1"]; ?>" height="100" width="100"> <?php echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; echo $row["name"]; echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; echo $row["title"]; echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; echo $row["author"]; echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; echo $row["price"]; echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; echo $row["isbn"]; echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; echo $row["type"]; echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; ?> <a href="updaterecord.php?id=<?php echo $row["id"]; ?>"><button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
-          echo "<td style='font-size:16px; color: black;'>"; ?> <a href="deleterecord.php?id=<?php echo $row["id"]; ?>"><button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
-
-
-          echo "</tr>";
-
-      }
-    ?>
-    
-
-
-
-    </tbody>
-  </table>
-
+<div class="textbox">
+  <input type="text" placeholder="Name" id="name" name="name" value="" required>
 </div>
+
+<div class="textbox">
+  <input type="text" placeholder="Title" id="title" name="title" value="" required>
+</div>
+
+<div class="textbox">
+  <input type="text" placeholder="Author" id="author" name="author" value="" required>
+</div>
+
+<div class="textbox">
+  <input type="text" placeholder="Price" id="price" name="price" value="" required>
+</div>
+
+<div class="textbox">
+  <input type="text" placeholder="ISBN" id="isbn" name="isbn" value="" required>
+</div>
+
+    <div class="textbox">
+      <label for="type" style='font-size:16px; color: white;'>Status:</label>
+      <select style='font-size:16px; color: black;' name="type">
+        <option style='font-size:16px; color: black;' for="type" value="-1" >Select status</option>
+        <option style='font-size:16px; color: black;' value="Returned">Returned</option>
+        <option style='font-size:16px; color: black;' value="Pending">Pending</option>
+      </select>
+    </div>
+
+    <div class="textbox">
+      <label for="pwd" style='font-size:16px; color: white;'>Image:</label>
+      <input type="file" class="form-control" name="f1">
+    </div>
+
+  <button type="submit" name="insert" class="btn btn-default">Insert</button>
+  <p><br><a href="index.html">Logout</a><br></p>
+  <p><br><a href="mainpage.php">See Records</a><br></p>
+</form>
+  </div>
+
 
 </body>
 
 
     </div>
   
-
-
-
-
-
 
 <?php
 if(isset($_POST['insert'])){
@@ -167,7 +99,7 @@ $conn = null;
 
 
   ?> 
-  <script type="text/javascript">window.location.href=window.location.href;</script>
+  <script type="text/javascript">window.location.href=mainpage.php;</script>
 
   
 

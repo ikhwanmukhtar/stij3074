@@ -5,4 +5,4 @@ mysqli_query($link, "DELETE FROM record where id=$id");
 
 ?>
 
-<script type="text/javascript">window.location="managerecord.php";</script>
+<script type="text/javascript">window.location="mainpage.php";</script>

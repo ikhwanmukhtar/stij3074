@@ -31,59 +31,48 @@ while ($row=mysqli_fetch_array($res)){
   <title>Duty Management System</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
     
 
 </head>
 <body>
 
-<div class="container">
-    <div class="col-lg-4">
-  <h2 style='font-size:30px; color: black;'>Update Record</h2>
+  <h2 style='font-size:30px; color: white;'>Update Record</h2>
+  <div class="login-box">
   <form action="" method="post" enctype="multipart/form-data">
 
   <img src="<?php echo $image1; ?>" height="100" width="100">
 
-  <div class="form-group">
-        <label for="id" style='font-size:16px; color: black;'>ID:</label>
+  <div class="textbox">
         <input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" value="<?php echo $id; ?>">
       </div>
 
-      <div class="form-group">
-        <label for="name" style='font-size:16px; color: black;'>Name:</label>
+      <div class="textbox">
         <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="<?php echo $name; ?>">
       </div>
 
-      <div class="form-group">
-        <label for="title" style='font-size:16px; color: black;'>Title:</label>
+      <div class="textbox">
         <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" value="<?php echo $title; ?>">
       </div>
 
-      <div class="form-group">
-        <label for="author" style='font-size:16px; color: black;'>Author:</label>
+      <div class="textbox">
         <input type="text" class="form-control" id="author" placeholder="Enter author" name="author" value="<?php echo $author; ?>">
       </div>
 
-      <div class="form-group">
-        <label for="price" style='font-size:16px; color: black;'>Price:</label>
+      <div class="textbox">
         <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" value="<?php echo $price; ?>">
       </div>
 
-      <div class="form-group">
-        <label for="isbn" style='font-size:16px; color: black;'>ISBN:</label>
+      <div class="textbox">
         <input type="text" class="form-control" id="isbn" placeholder="Enter isbn" name="isbn" value="<?php echo $isbn; ?>">
       </div>
 
     
 
-      <div class="form-group">
-        <label for="type" style='font-size:16px; color: black;'>Status:</label>
+      <div class="textbox">
+        <label for="type" style='font-size:16px; color: white;'>Status:</label>
         <select style='font-size:16px; color: black;' name="type">
           <option style='font-size:16px; color: black;' for="type" value="-1" >Select status</option>
           <option style='font-size:16px; color: black;' value="Returned">Returned</option>
@@ -91,18 +80,18 @@ while ($row=mysqli_fetch_array($res)){
         </select>
       </div>
 
-      <div class="form-group">
-        <label for="pwd" style='font-size:16px; color: black;'>Image:</label>
+      <div class="textbox">
+        <label for="pwd" style='font-size:16px; color: white;'>Image:</label>
         <input type="file" class="form-control" name="f1">
+        </div>
 
-    <br><button type="submit" name="update" class="btn btn-default">Update</button>
-    <p><br><a href="managerecord.php">Cancel</a><br></p>
+    <br><button type="submit" name="update" class="btn">Update</button></br>
+    <p><br><a href="mainpage.php">Cancel</a><br></p>
     
    
   </form>
-</div>
-</div>
 
+  </div>
 </div>
             
                 
@@ -131,15 +120,33 @@ if(isset($_POST['update'])){
 
 
     
-  ?> <script type="text/javascript">window.location="managerecord.php";</script>
+  ?> <script type="text/javascript">window.location="mainpage.php";</script>
 
   <?php
 }
 
 ?>
 
+<?php
+if(isset($_POST['delete'])){
+  mysqli_query($link, "DELETE FROM record WHERE name = '$_POST[name]'") or die(mysqli_error($link));
+  ?> 
+  <script type="text/javascript">window.location.href=window.location.href;</script>
+
+  <?php
+}
+
+if(isset($_POST['update'])){
 
 
+  mysqli_query($link, "UPDATE FROM record SET name = '$_POST[name]' WHERE name = '$_POST[name]'") or die(mysqli_error($link));
+  ?> 
+  <script type="text/javascript">window.location.href=window.location.href;</script>
+
+  <?php
+}
+
+?>
 
 
 </html>
